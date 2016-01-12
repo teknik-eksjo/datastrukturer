@@ -1,0 +1,39 @@
+# =================
+# Windows files
+# =================
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle bin on file share
+$RECYCLE.BIN/
+
+# =================
+# Mac OS X files
+# =================
+
+# Desktop service store
+.DS_Store
+
+# =================
+# Python ignores
+# =================
+
+# Python generated files
+*.pyc
+__pycache__
+
+# Virtual environments
+env
+venv
+
+# Temporary project files
+tmp/
+.coverage
+
+# Sphinx built documentation
+docs/build/*
