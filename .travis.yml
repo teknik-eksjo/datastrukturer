@@ -9,3 +9,5 @@ script:
   - ./manage.py lint
   - coverage run --include exercises/* ./manage.py test
   - coverage report --fail-under 100
+notifications:
+  email: false
