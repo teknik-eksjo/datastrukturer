@@ -1,5 +1,6 @@
 """Övningar på ADTn unordered list."""
 
+from exceptions import EmptyList
 
 class Node():
     """Implementation av nod för `UnorderedList`.

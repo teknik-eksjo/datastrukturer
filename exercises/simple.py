@@ -1,5 +1,7 @@
 """Övningar på de enklare ADTerna."""
 
+from exceptions import EmptyStack, EmptyQueue
+
 
 class Stack():
     """Implementation av ADTn stack.
