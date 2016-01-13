@@ -7,4 +7,5 @@ before_script:
   - chmod +x manage.py
 script:
   - ./manage.py lint
-  - ./manage.py test
+  - coverage run --include exercises/* ./manage.py test
+  - coverage report --fail-under 100
