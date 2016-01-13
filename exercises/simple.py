@@ -1,6 +1,6 @@
 """Övningar på de enklare ADTerna."""
 
-from exceptions import EmptyStack, EmptyQueue
+from .exceptions import EmptyStack, EmptyQueue
 
 
 class Stack():
