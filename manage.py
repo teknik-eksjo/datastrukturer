@@ -18,7 +18,7 @@ def test(with_coverage, no_html, no_report):
         # Initialize coverage.py.
         import coverage
         COV = coverage.coverage(branch=True,
-                                include='{}/*'.format(APP_FOLDER))
+                                source=[APP_FOLDER])
         COV.start()
 
     # Run all unit tests found in tests folder.
