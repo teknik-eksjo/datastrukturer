@@ -6,8 +6,8 @@ class Node():
     """Implementation av nod för `UnorderedList`.
     """
 
-    def __init__(self, data):
-        """Initiera noden med attributen `self._data` och `self._next`.
+    def __init__(self, data, next):
+        """Initiera noden med attributen `self.data` och `self.next`.
         """
         pass
 
