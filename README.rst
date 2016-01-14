@@ -18,7 +18,7 @@ För att köra linter och enhetstester kan du använda följande kommandon.
   python manage.py test
 
 För vissa övningar förväntas du själv skriva enhetstester. Detta görs med
-fördel i testfiler med beskrivande namn. (De måste ha formen test_*.py.)
+fördel i testfiler med beskrivande namn. (De måste ha formen :code:`test_*.py`.)
 
 .. code-block::
 
