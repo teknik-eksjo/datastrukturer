@@ -44,7 +44,7 @@ class UnorderedList():
         pass
 
     def remove(self, item):
-        """Raderar `item` från listan.
+        """Raderar första förekomsten av `item` från listan.
         """
         pass
 
@@ -59,7 +59,7 @@ class UnorderedList():
         pass
 
     def index(self, item):
-        """Returnerar index i listan för `item`.
+        """Returnerar index i listan för första förekomsten av `item`.
         """
         pass
 
