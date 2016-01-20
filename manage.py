@@ -22,10 +22,8 @@ def test(with_coverage, no_html, no_report):
         COV.start()
 
     # Run all unit tests found in tests folder.
-    click.echo('Running autodiscovered tests\n{}'.format('=' * 70))
-    import unittest
-    tests = unittest.TestLoader().discover('tests')
-    results = unittest.TextTestRunner(verbosity=2).run(tests)
+    import pytest
+    exit_code = pytest.main('tests')
 
     if with_coverage:
         # Sum up the results of the code coverage analysis.
@@ -45,9 +43,7 @@ def test(with_coverage, no_html, no_report):
             COV.report()
             COV.erase()
 
-    if not results.wasSuccessful():
-        # Make sure to get a non-zero exit code when failing.
-        raise click.ClickException('Test suite failed.')
+    raise SystemExit(exit_code)
 
 
 @click.command()

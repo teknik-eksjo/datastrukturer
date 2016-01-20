@@ -1,5 +1,6 @@
 """Exceptions för de olika datastrukturerna."""
 
+
 class EmptyStack(Exception):
     pass
 
