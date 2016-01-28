@@ -58,7 +58,7 @@ def lint(all):
 
     if all:
         click.echo('Running Linter for all code\n{}'.format('=' * 70))
-        sys.argv = ['flake8', '.', '--exclude=venv']
+        sys.argv = ['flake8', '.']
         flake8.main()
     else:
         click.echo('Running Linter\n{}'.format('=' * 70))

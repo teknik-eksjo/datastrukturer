@@ -1,3 +1,4 @@
 click>=5.1
 coverage>=4.0
 flake8>=2.4.1
+flake8-docstrings>=0.2.4
