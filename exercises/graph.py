@@ -2,21 +2,34 @@
 
 
 class Vertex():
+    """Implementation av nod. Används tillsammans med `Graph`."""
     def __init__(self, key):
+        """Initiera noden med `key` och utan grannar."""
         self.key = key
         self._connected_to = {}
 
     def add_neighbor(self, neighbor, weight=None):
+        """Lägg till en granne med den frivilliga vikten `weight`."""
         self._connected_to[neighbor] = weight
 
     def get_connections(self):
+        """Returnera en lista med nodens grannar."""
         return self._connected_to.keys()
 
     def get_weight(self, neighbor):
+        """Returnera vikten hos kanten till grannen `neighbor`."""
         return self._connected_to[neighbor]
 
     def __repr__(self):
-        return '<Vertex {}: {}>'.format(self.key, ', '.connected_to.keys())
+        """Object representation with `self.key` as identifiera and the first
+        five neighbors.
+        """
+
+        neighbors = sorted(connected_to.keys())
+        if len(neighbors) > 5:
+            del neighbors[5:]
+            neighbors.append('...')
+        return '<Vertex {}: {}>'.format(self.key, ', '.join(neighbors))
 
 
 class Graph():
@@ -38,16 +51,13 @@ class Graph():
         """Initiera `self._vertices`."""
         self._vertices = []
 
-
     def add_vertex(self):
         """Lägg till en ny nod."""
         pass
 
-
     def get_vertex(self, key):
         """Returnera noden med matchande `key`."""
         pass
-
 
     def get_vertices(self):
         """Returnera grafens alla noder."""
@@ -56,7 +66,6 @@ class Graph():
     def __contains__(self, key):
         """Kontrollera om noden med matchande `key` finns."""
         pass
-
 
     def __iter__(self):
         """Gör det enkelt att iterera över grafens alla noder."""

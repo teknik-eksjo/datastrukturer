@@ -1,4 +1,4 @@
-"""Implementation av BinarySearchTree (BST)
+"""Övningar på BinarySearchTree (BST).
 
 Ett BST är ett rotat binärt träd där varje nod har en `key` och ett
 eventuellt värde, `value`. Varje nod i trädet finns två träd,
@@ -13,8 +13,8 @@ lagts till. I värsta fall degenererar de fullständigt.
 
 
 class BinarySearchTree():
-    """
-    """
+    """Implementation av BinarySearchTree (BST)."""
+
     def __init__(self, key, value=None):
         """Initiera det tomma trädet."""
         self.key = key
@@ -42,4 +42,9 @@ class BinarySearchTree():
 
         Implementera som en generator.
         """
+        pass
+
+    def __str__(self):
+        """Utskrift av trädets alla noder (in-order)."""
+        # Använd traverse...
         pass
