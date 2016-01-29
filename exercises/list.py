@@ -4,12 +4,10 @@ from .exceptions import EmptyList
 
 
 class Node():
-    """Implementation av nod för `UnorderedList`.
-    """
+    """Implementation av nod för `UnorderedList`."""
 
     def __init__(self, data, next):
-        """Initiera noden med attributen `self.data` och `self.next`.
-        """
+        """Initiera noden med attributen `self.data` och `self.next`."""
         pass
 
 
