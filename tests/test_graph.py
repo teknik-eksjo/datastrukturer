@@ -1,5 +1,5 @@
 import unittest
-from exercises.tree import Vertex, Graph
+from exercises.graph import Vertex, Graph
 
 
 class VertexTests(unittest.TestCase):

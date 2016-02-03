@@ -29,7 +29,7 @@ class BinarySearchTree():
     def lookup(self, key):
         """Sök efter noden med matchande key.
 
-        Returnerar matchande noden eller None.
+        Returnerar tupeln (key, value) för matchande noden eller None.
         """
         pass
 

@@ -1,5 +1,5 @@
 import unittest
-from exercises.tree import Tree
+from exercises.tree import BinarySearchTree
 
 
 class TreeNodeTests(unittest.TestCase):
