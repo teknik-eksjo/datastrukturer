@@ -26,15 +26,19 @@ class BinarySearchTree():
         """Lägg till en nod i trädet."""
         pass
 
-    def lookup(self, key):
+    def lookup(self, key, parent=None):
         """Sök efter noden med matchande key.
 
-        Returnerar matchande noden eller None.
+        Returnerar tupeln med matchande noden (objektet) och dess förälder.
         """
         pass
 
     def delete(self, key):
-        """Radera noden med matchande key."""
+        """Radera noden med matchande key.
+
+        Notera att det finns tre fall att hantera, noden som raderas kan ha
+        0, 1 eller 2 barn.
+        """        
         pass
 
     def traverse(self):
