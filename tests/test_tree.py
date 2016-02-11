@@ -1,10 +1,9 @@
 import unittest
-from exercises.tree import Tree
+from exercises.tree import BinarySearchTree, Node
 
 
-class TreeNodeTests(unittest.TestCase):
+class NodeTests(unittest.TestCase):
     pass
 
-
-class TreeTests(unittest.TestCase):
+class BinarySearchTreeTests(unittest.TestCase):
     pass
