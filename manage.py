@@ -24,7 +24,7 @@ def test(with_coverage, no_html, no_report):
 
     # Run all unit tests found in tests folder.
     import pytest
-    exit_code = pytest.main('tests')
+    exit_code = pytest.main(['-v', 'tests'])
 
     if with_coverage:
         # Sum up the results of the code coverage analysis.

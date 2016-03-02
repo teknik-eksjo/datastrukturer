@@ -14,3 +14,13 @@ class EmptyQueue(Exception):
 class EmptyList(Exception):
     """För operationer som blir omöjliga att utföra för att listan är tom."""
     pass
+
+
+class EmptyTree(Exception):
+    """För operationer som blir omöjliga att utföra för att trädet är tomt."""
+    pass
+
+
+class EmptyGraph(Exception):
+    """För operationer som blir omöjliga att utföra för att grafen är tom."""
+    pass
