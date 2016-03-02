@@ -5,7 +5,7 @@ APP_FOLDER = 'exercises'
 
 
 @click.group()
-def cli():
+def cli():  # NOQA
     pass
 
 
@@ -14,6 +14,7 @@ def cli():
 @click.option('--no-html', is_flag=True)
 @click.option('--no-report', is_flag=True)
 def test(with_coverage, no_html, no_report):
+    """Run the tests."""
     if with_coverage:
         # Initialize coverage.py.
         import coverage
@@ -48,18 +49,23 @@ def test(with_coverage, no_html, no_report):
 
 @click.command()
 @click.option('--all', is_flag=True)
-def lint(all):
+@click.option('--stats', is_flag=True)
+def lint(all, stats):
+    """Run the linter."""
     from flake8 import main as flake8
     import sys
 
     if all:
-        click.echo('Running Linter for all code\n{}'.format('=' * 70))
-        sys.argv = ['flake8', '.', '--exclude=venv']
-        flake8.main()
+        click.echo('Running linter (including skeleton code).')
+        sys.argv = ['flake8', '.']
     else:
-        click.echo('Running Linter\n{}'.format('=' * 70))
+        click.echo('Running Linter...')
         sys.argv = ['flake8', APP_FOLDER]
-        flake8.main()
+
+    if stats:
+        sys.argv.extend(['--statistics', '-qq'])
+
+    flake8.main()
 
 
 cli.add_command(test)
