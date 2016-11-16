@@ -1,35 +1,4 @@
-"""Övningar på ADTn Graph."""
-
-
-class Vertex():
-    """Implementation av nod. Används tillsammans med `Graph`."""
-    def __init__(self, key):
-        """Initiera noden med `key` och utan grannar."""
-        self.key = key
-        self._connected_to = {}
-
-    def add_neighbor(self, neighbor, weight=None):
-        """Lägg till en granne med den frivilliga vikten `weight`."""
-        self._connected_to[neighbor] = weight
-
-    def get_connections(self):
-        """Returnera en lista med nodens grannar."""
-        return self._connected_to.keys()
-
-    def get_weight(self, neighbor):
-        """Returnera vikten hos kanten till grannen `neighbor`."""
-        return self._connected_to[neighbor]
-
-    def __repr__(self):
-        """Object representation with `self.key` as identifiera and the first
-        five neighbors.
-        """
-
-        neighbors = sorted(connected_to.keys())
-        if len(neighbors) > 5:
-            del neighbors[5:]
-            neighbors.append('...')
-        return '<Vertex {}: {}>'.format(self.key, ', '.join(neighbors))
+"""Implementation av ADTn graph."""
 
 
 class Graph():
