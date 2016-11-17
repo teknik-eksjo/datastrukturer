@@ -11,25 +11,42 @@ class Graph():
     En graf med noderna `a`, `b` och `c` och kanter mellan alla tre skulle
     representeras som nedan.
 
-    self._nodes = {'a': (('b', 4), ('c', 2)),
-                   'b': (('a', 4), ('c', 5)),
-                   'c': (('a', 2), ('b', 5))}
+    self._nodes = {'a': [('b', 4), ('c', 2)],
+                   'b': [('a', 4), ('c', 5)],
+                   'c': [('a', 2), ('b', 5)]}
     """
 
     def __init__(self):
-        """Initiera `self._vertices`."""
-        self._vertices = []
+        """Initiera `self._nodes`."""
+        self._ nodes = {}
 
-    def add_vertex(self):
-        """Lägg till en ny nod."""
+
+    def is_adjacent(self, x, y):
+        """Kontrollera om `x` och `y` är grannar."""
+        return False
+
+    def neighbours(self, key):
+        """Returnera alla grannar till `key`."""
         pass
 
-    def get_vertex(self, key):
-        """Returnera noden med matchande `key`."""
+    def add_vertex(self, key):
+        """Lägg till en ny nod."""
         pass
 
     def get_vertices(self):
         """Returnera grafens alla noder."""
+        pass
+
+    def add_edge(self, x, y, value = None):
+        """Lägg till en kant från `x` till `y`."""
+        pass
+
+    def set_edge_value(self, key, value):
+        """Sätt värde för kanten mellan `x` och `y`."""
+        pass
+
+    def get_edge_value(self, key):
+        """Returnera värde för kanten mellan `x` och `y`."""
         pass
 
     def __contains__(self, key):
